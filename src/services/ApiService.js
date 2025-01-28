@@ -1,7 +1,7 @@
 import axios from "axios";
 
 class ApiService {
-  constructor(url) {
+  constructor(url = "http://localhost:3000") {
     this.url = url;
   }
   async getAll(model) {
