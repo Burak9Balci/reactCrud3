@@ -1,0 +1,82 @@
+$variable1:#1ea283;
+$tableWidth:15px;
+$formWidth:200px;
+$formHeight:300px;
+$background-color: white; // SCSS değişkeni
+
+body {
+  background-color: $background-color;
+}
+
+.white-background {
+  background-color: white;
+}
+
+.black-background {
+  background-color: black;
+}
+table{
+    border-collapse: collapse;
+    background-color: $variable1;
+    width: 100%;
+}
+th,
+td {
+  border: 1px solid rgb(126, 23, 23);
+  padding: $tableWidth;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+button{
+    background-color: rgb(220, 210, 105);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.white-text{
+   color:white
+}
+.nav{
+    width:200px;
+    height:400px;
+    background-color: aqua;
+    border-radius: 25%;
+    border:1px solid black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.cards{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    height: 100vh;
+    
+}
+label{
+    padding: 5px;
+    color: blue;
+}
+.form-container {
+    display: flex;
+    justify-content: center;  /* Yatayda ortalama */
+    align-items: center;      /* Dikeyde ortalama */
+    width: 100vw;             /* Sayfanın genişliğini kaplasın */
+  
+  }
+  
+.form {
+    gap: 10px;
+    width: 300px;          /* Form genişliği */
+    padding: 20px;         /* İç boşluk */
+    background-color: #bb4f4f;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

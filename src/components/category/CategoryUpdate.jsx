@@ -35,54 +35,53 @@ const CategoryUpdate = () => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit} className="">
-      {/* Kategori Adı */}
-      <div>
-        <label htmlFor="categoryName" className="">
-          Kategori Adı
-        </label>
-        <input
-          id="categoryName"
-          name="categoryName"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.categoryName}
-          className={""}
-          placeholder="Kategori adını girin"
-        />
-        {formik.touched.categoryName && formik.errors.categoryName ? (
-          <p className="">{formik.errors.categoryName}</p>
-        ) : null}
-      </div>
+    <div className="form-container">
+      <form onSubmit={formik.handleSubmit} className="form">
+        <div>
+          <label htmlFor="categoryName" className="">
+            Kategori Adı
+          </label>
+          <input
+            id="categoryName"
+            name="categoryName"
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.categoryName}
+            className={""}
+            placeholder="Kategori adını girin"
+          />
+          {formik.touched.categoryName && formik.errors.categoryName ? (
+            <p className="">{formik.errors.categoryName}</p>
+          ) : null}
+        </div>
 
-      {/* Açıklama */}
-      <div className="">
-        <label htmlFor="description" className="">
-          Açıklama
-        </label>
-        <input
-          id="description"
-          name="description"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.description}
-          className={``}
-          placeholder="Açıklama girin"
-        />
-        {formik.touched.description && formik.errors.description ? (
-          <p className="">{formik.errors.description}</p>
-        ) : null}
-      </div>
+        <div className="">
+          <label htmlFor="description" className="">
+            Açıklama
+          </label>
+          <input
+            id="description"
+            name="description"
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.description}
+            className={``}
+            placeholder="Açıklama girin"
+          />
+          {formik.touched.description && formik.errors.description ? (
+            <p className="">{formik.errors.description}</p>
+          ) : null}
+        </div>
 
-      {/* Submit Butonu */}
-      <div>
-        <button type="submit" className="">
-          Ekle
-        </button>
-      </div>
-    </form>
+        <div>
+          <button type="submit" className="">
+            Ekle
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 

@@ -3,16 +3,11 @@
     {
       "productName": "araba",
       "price": 1234,
-      "categoryId": "1",
+      "categoryId": null,
       "id": "be85"
     }
   ],
   "categories": [
-    {
-      "id": "1",
-      "categoryName": "İnsan",
-      "description": "Mutlu insan"
-    },
     {
       "id": "d2b9",
       "categoryName": "aa",

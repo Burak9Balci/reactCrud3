@@ -6,8 +6,10 @@ import ProductAdd from "../components/product/ProductAdd";
 import ProductList from "../components/product/ProductList";
 import ProductUpdate from "../components/product/ProductUpdate";
 import Home from "../components/user/Home";
-import Dashboard from "../components/user/Dashboard";
+import Dashboard from "../components/user/dashboard/Dashboard";
 import Profile from "../components/user/Profile";
+
+import Header from "../components/user/dashboard/Header";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -17,8 +19,8 @@ const AppRoutes = () => {
       <Route path="/categories" element={<CategoryList />} />
       <Route path="/products/Add" element={<ProductAdd />} />
       <Route path="/products" element={<ProductList />} />
+      <Route path="/dashboard/dashboard" element={<Dashboard />} />
       <Route path="/profile" element={<Profile />} />
-      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/products/Update/:id" element={<ProductUpdate />} />
     </Routes>
   );

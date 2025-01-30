@@ -57,77 +57,79 @@ const ProductAdd = () => {
   });
 
   return (
-    <form className="product-form" onSubmit={formik.handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="productName">Ürün ismi</label>
-        <input
-          type="text"
-          id="productName"
-          name="productName"
-          placeholder="Ürün ismini girin"
-          value={formik.values.productName}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          className={
-            formik.touched.productName && formik.errors.productName
-              ? "input-error"
-              : ""
-          }
-        />
-        {formik.touched.productName && formik.errors.productName && (
-          <div className="error-message">{formik.errors.productName}</div>
-        )}
-      </div>
+    <div className="form-container">
+      <form className="form" onSubmit={formik.handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="productName">Ürün ismi</label>
+          <input
+            type="text"
+            id="productName"
+            name="productName"
+            placeholder="Ürün ismini girin"
+            value={formik.values.productName}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            className={
+              formik.touched.productName && formik.errors.productName
+                ? "input-error"
+                : ""
+            }
+          />
+          {formik.touched.productName && formik.errors.productName && (
+            <div className="error-message">{formik.errors.productName}</div>
+          )}
+        </div>
 
-      <div className="form-group">
-        <label htmlFor="price">Fiyat</label>
-        <input
-          type="text"
-          id="price"
-          name="price"
-          placeholder="Fiyat girin"
-          value={formik.values.price}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          className={
-            formik.touched.price && formik.errors.price ? "input-error" : ""
-          }
-        />
-        {formik.touched.price && formik.errors.price && (
-          <div className="error-message">{formik.errors.price}</div>
-        )}
-      </div>
+        <div className="form-group">
+          <label htmlFor="price">Fiyat</label>
+          <input
+            type="text"
+            id="price"
+            name="price"
+            placeholder="Fiyat girin"
+            value={formik.values.price}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            className={
+              formik.touched.price && formik.errors.price ? "input-error" : ""
+            }
+          />
+          {formik.touched.price && formik.errors.price && (
+            <div className="error-message">{formik.errors.price}</div>
+          )}
+        </div>
 
-      <div className="form-group">
-        <label htmlFor="categoryId">Kategori</label>
-        <select
-          id="categoryId"
-          name="categoryId"
-          value={formik.values.categoryId}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          className={
-            formik.touched.categoryId && formik.errors.categoryId
-              ? "input-error"
-              : ""
-          }
-        >
-          <option value="">Kategori seçin</option>
-          {categories.map((cat) => (
-            <option key={cat.id} value={cat.id}>
-              {cat.categoryName}
-            </option>
-          ))}
-        </select>
-        {formik.touched.categoryId && formik.errors.categoryId && (
-          <div className="error-message">{formik.errors.categoryId}</div>
-        )}
-      </div>
+        <div className="form-group">
+          <label htmlFor="categoryId">Kategori</label>
+          <select
+            id="categoryId"
+            name="categoryId"
+            value={formik.values.categoryId}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            className={
+              formik.touched.categoryId && formik.errors.categoryId
+                ? "input-error"
+                : ""
+            }
+          >
+            <option value="">Kategori seçin</option>
+            {categories.map((cat) => (
+              <option key={cat.id} value={cat.id}>
+                {cat.categoryName}
+              </option>
+            ))}
+          </select>
+          {formik.touched.categoryId && formik.errors.categoryId && (
+            <div className="error-message">{formik.errors.categoryId}</div>
+          )}
+        </div>
 
-      <button type="submit" className="submit-btn">
-        Gönder
-      </button>
-    </form>
+        <button type="submit" className="submit-btn">
+          Gönder
+        </button>
+      </form>
+    </div>
   );
 };
 
