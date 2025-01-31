@@ -12,7 +12,7 @@ const CategoryUpdate = () => {
   // useFormik hook'unun kullanımı
   const formik = useFormik({
     initialValues: {
-      categoryName: "", // Kategori adAı başlangıç değeri
+      categoryName: "", // Kategori adAı başlangıç değeri Eğer istenilirse tıklandığında butana değiştirmke istediğim değerlerin gözükmesi şü şekilde yapıla bilinir apiden id yardımıyla o vaeri çekilir value kısımlarına backtickler yardımıyla yazılır
       description: "", // Açıklama başlangıç değeri
     },
     validationSchema: Yup.object({

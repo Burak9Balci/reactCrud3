@@ -1,5 +1,5 @@
 import ApiService from "../../../services/ApiService";
-import ApiService from "@services/ApiService"; // Alias ı bütün denemelerime rağmen çalıştıramadım
+//import ApiService from "@services/ApiService"; // Alias ı bütün denemelerime rağmen çalıştıramadım
 import { useEffect, useState } from "react";
 
 const Cards = () => {
