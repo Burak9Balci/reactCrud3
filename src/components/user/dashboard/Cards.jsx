@@ -1,4 +1,5 @@
 import ApiService from "../../../services/ApiService";
+import ApiService from "@services/ApiService"; // Alias ı bütün denemelerime rağmen çalıştıramadım
 import { useEffect, useState } from "react";
 
 const Cards = () => {
@@ -18,7 +19,7 @@ const Cards = () => {
       }
     };
     fetchData();
-  }, []);
+  }, []); // boş parantezz koydukki sayfa render edildiğinde birkez çalışsın oda hata yoksa
   return (
     <main className="container">
       <div className="flex">
