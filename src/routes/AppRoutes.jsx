@@ -8,8 +8,6 @@ import ProductUpdate from "../components/product/ProductUpdate";
 import Home from "../components/user/Home";
 import Dashboard from "../components/user/dashboard/Dashboard";
 import Profile from "../components/user/Profile";
-
-import Header from "../components/user/dashboard/Header";
 const AppRoutes = () => {
   return (
     <Routes>

@@ -1,11 +1,22 @@
-$variable1:#1ea283;
-$tableWidth:15px;
-$formWidth:200px;
-$formHeight:300px;
-$background-color: white; // SCSS değişkeni
+$primary-bg: #1ea283;
+$bg-color: white;
+$table-padding: 15px;
+$formWidth: 200px;
+$formHeight: 300px;
+$primary-color: #4a90e2;
+$secondary-color: #f8f8f8;
+$border-color: #ddd;
+$text-color: #333;
+$shadow: rgba(0, 0, 0, 0.1);
+
+
+.text-center {
+  text-align: center;
+}
+
 
 body {
-  background-color: $background-color;
+  background-color: $bg-color;
 }
 
 .white-background {
@@ -15,68 +26,123 @@ body {
 .black-background {
   background-color: black;
 }
-table{
-    border-collapse: collapse;
-    background-color: $variable1;
-    width: 100%;
+
+
+table {
+  border-collapse: collapse;
+  background-color: $primary-bg;
+  width: 100%;
 }
+
 th,
 td {
   border: 1px solid rgb(126, 23, 23);
-  padding: $tableWidth;
+  padding: $table-padding;
   text-align: center;
-  border-collapse: collapse;
 }
 
-button{
-    background-color: rgb(220, 210, 105);
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    
+
+button {
+  background-color: rgb(220, 210, 105);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(rgb(220, 210, 105), 10%);
+  }
 }
-.white-text{
-   color:white
+
+// Navbar Stili
+.nav {
+  width: 80%;
+  max-width: 200px;
+  height: auto;
+  min-height: 200px;
+  background-color: aqua;
+  border-radius: 25%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    max-width: 150px;
+  }
 }
-.nav{
-    width:200px;
-    height:400px;
-    background-color: aqua;
-    border-radius: 25%;
-    border:1px solid black;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+
+//kart için yaptım tasarım
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100vh;
 }
-.cards{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:10px;
-    height: 100vh;
-    
-}
-label{
-    padding: 5px;
-    color: blue;
-}
+
+
 .form-container {
-    display: flex;
-    justify-content: center;  /* Yatayda ortalama */
-    align-items: center;      /* Dikeyde ortalama */
-    width: 100vw;             /* Sayfanın genişliğini kaplasın */
-  
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
 .form {
-    gap: 10px;
-    width: 300px;          /* Form genişliği */
-    padding: 20px;         /* İç boşluk */
-    background-color: #bb4f4f;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  gap: 10px;
+  width: 300px;
+  padding: 20px;
+  background-color: #bb4f4f;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Kategori ve Ürün Stillleri
+.container {
+  padding: 20px;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 10px;
   }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    background-color: $secondary-color;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px $shadow;
+    width: 250px;
+    border: 1px solid $border-color;
+
+    h3 {
+      color: $text-color;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 14px;
+      color: darken($text-color, 20%);
+    }
+  }
+
+  .category-card {
+    background-color: lighten($primary-color, 40%);
+  }
+
+  .product-card {
+    background-color: lighten($primary-color, 20%);
+  }
+}
