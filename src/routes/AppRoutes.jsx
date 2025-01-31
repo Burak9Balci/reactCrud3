@@ -8,6 +8,7 @@ import ProductUpdate from "../components/product/ProductUpdate";
 import Home from "../components/user/Home";
 import Dashboard from "../components/user/dashboard/Dashboard";
 import Profile from "../components/user/Profile";
+import NotFound from "";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -20,7 +21,9 @@ const AppRoutes = () => {
       <Route path="/dashboard/dashboard" element={<Dashboard />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/products/Update/:id" element={<ProductUpdate />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
 export default AppRoutes;
+// 24. satırdaki route farazi olarak yalnış bir url girildiğinde bizi bir 404 not found sayfasına yönlendirir tabi bu sayfa nın açılması gerekli
