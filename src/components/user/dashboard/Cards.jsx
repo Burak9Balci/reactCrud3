@@ -44,7 +44,7 @@ const Cards = () => {
             <h3>Ürünü ID : {product.id}</h3>
             <p>Ürün ismi : {product.productName}</p>
             <p>Fiyat : {product.price}</p>
-            <p>Category ID: {product.categoryId}</p>
+            <p>Category ID : {product.categoryId}</p>
           </div>
         ))}
       </div>
