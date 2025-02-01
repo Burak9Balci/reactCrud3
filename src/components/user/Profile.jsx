@@ -1,4 +1,4 @@
 const Profile = () => {
-  return <div>Fatih ve Çağrı hocanın xXx Gizli verileri xXx</div>;
+  return <h1>Çağrı hocanın xXx Gizli kasedi xXx</h1>;
 };
 export default Profile;
