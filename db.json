@@ -1,8 +1,22 @@
 {
   "products": [
-   
+    {
+      "id": "0a40",
+      "productName": "Rafe",
+      "price": 2222,
+      "categoryId": "ae39"
+    }
   ],
   "categories": [
-    
+    {
+      "id": "ae39",
+      "categoryName": "Araba",
+      "description": "Hızlı Araba"
+    },
+    {
+      "id": "89d8",
+      "categoryName": "Şarkıcı",
+      "description": "solist"
+    }
   ]
 }

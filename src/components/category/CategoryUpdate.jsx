@@ -48,7 +48,7 @@ const CategoryUpdate = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.categoryName}
-            className={""}
+            className={"textbox"}
             placeholder="Kategori adını girin"
           />
           {formik.touched.categoryName && formik.errors.categoryName ? (
@@ -67,7 +67,7 @@ const CategoryUpdate = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.description}
-            className={``}
+            className={`textbox`}
             placeholder="Açıklama girin"
           />
           {formik.touched.description && formik.errors.description ? (

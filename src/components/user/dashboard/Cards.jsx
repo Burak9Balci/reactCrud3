@@ -27,9 +27,9 @@ const Cards = () => {
         <Link to="/categories">Categories</Link>
         {categories.map((category) => (
           <div key={category.id} className="card categoryCard">
-            <h3>{category.id}</h3>
-            <h3>{category.categoryName}</h3>
-            <p>{category.description}</p>
+            <h3>Category Id:{category.id}</h3>
+            <h3>Category Adı:{category.categoryName}</h3>
+            <p>Category Açıklaması:{category.description}</p>
           </div>
         ))}
       </div>
