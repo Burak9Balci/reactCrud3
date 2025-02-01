@@ -23,23 +23,27 @@ const Cards = () => {
   }, []); // boş parantezz koydukki sayfa render edildiğinde birkez çalışsın oda hata yoksa
   return (
     <main className="container">
+      <Link to="/categories">
+        <h3>Categories</h3>
+      </Link>
       <div className="flex white-text">
-        <Link to="/categories">Categories</Link>
         {categories.map((category) => (
           <div key={category.id} className="card categoryCard">
-            <h3>Category Id:{category.id}</h3>
-            <h3>Category Adı:{category.categoryName}</h3>
-            <p>Category Açıklaması:{category.description}</p>
+            <h3>Category Id : {category.id}</h3>
+            <p>Category Adı : {category.categoryName}</p>
+            <p>Category Açıklaması : {category.description}</p>
           </div>
         ))}
       </div>
-
+      <Link to="/products">
+        <h3>Products</h3>
+      </Link>
       <div className="flex white-text">
-        <Link to="/products">Products</Link>
         {products.map((product) => (
           <div key={product.id} className="card productCard">
-            <h3>Ürün ismi: {product.productName}</h3>
-            <p>Fiyat: {product.price}</p>
+            <h3>Ürünü ID : {product.id}</h3>
+            <p>Ürün ismi : {product.productName}</p>
+            <p>Fiyat : {product.price}</p>
             <p>Category ID: {product.categoryId}</p>
           </div>
         ))}
